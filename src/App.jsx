@@ -5402,7 +5402,7 @@ export default function App() {
   const [dateFrom,  setDateFrom]  = useState("");
   const [dateTo,    setDateTo]    = useState("");
 
-  const handleData  = (data, fields, name) => { setCsvData({ data, fields, name }); setView("dashboard"); };
+  const handleData  = (data, fields, name) => { setCsvData({ data: data.filter(r => r != null && typeof r === "object"), fields, name }); setView("dashboard"); };
   const handleReset = () => { setCsvData(null); setView("dashboard"); };
 
   const dateProps = { dateFrom, dateTo, setDateFrom, setDateTo };

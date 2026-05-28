@@ -5228,7 +5228,7 @@ function ExecSummary({ rows, columns, fileName, onReset, onSwitchView, dateFrom,
                         {pgSparkData[pg.id]?.length >= 2 && (
                           <div className="cv-pg-sparkline"
                             title={`Volume trend over date range (${pgSparkData[pg.id].length} ${pgSparkData[pg.id].length > 60 ? "days" : "buckets"})`}>
-                            <Sparkline data={pgSparkData[pg.id]} color="#a78bfa" />
+                            <Sparkline data={pgSparkData[pg.id]} color="#ffe600" />
                           </div>
                         )}
                       </div>

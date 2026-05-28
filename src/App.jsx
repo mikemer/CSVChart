@@ -746,7 +746,7 @@ function UploadZone({ onData }) {
       header: true,
       dynamicTyping: true,
       skipEmptyLines: true,
-      worker: true,
+
       complete: ({ data, meta }) => {
         setLoading(false);
         if (!data.length) { setError("File parsed but contained no rows."); return; }

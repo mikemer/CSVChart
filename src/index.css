@@ -1,0 +1,38 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:           #0a0e1a;
+  --bg-nav:       #0d1220;
+  --bg-secondary: #111827;
+  --border:       rgba(255,255,255,0.08);
+  --border-hi:    rgba(255,255,255,0.16);
+  --text:         #cbd5e1;
+  --text-h:       #f1f5f9;
+  --text-dim:     #64748b;
+  --accent:       #38bdf8;
+  --accent-bg:    rgba(56,189,248,0.10);
+  --shadow:       0 8px 32px rgba(0,0,0,0.6);
+
+  --sev1: #dc2626;
+  --sev2: #f97316;
+  --sev3: #d97706;
+  --sev4: #4b5563;
+
+  --state-open:   #22c55e;
+  --state-prog:   #38bdf8;
+  --state-closed: #64748b;
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-hi); border-radius: 3px; }
+
+button { font-family: inherit; }

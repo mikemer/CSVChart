@@ -20,18 +20,6 @@ jobs:
         with:
           submodules: true
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
@@ -40,7 +28,6 @@ jobs:
           action: "upload"
           app_location: "/"
           output_location: "dist"
-          skip_app_build: true   # we already built above
 
   close_pull_request:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
